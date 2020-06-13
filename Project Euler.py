@@ -26,7 +26,7 @@ def ch2(x):
             evens.append((numbers[-1] + numbers[-2]))
     print(sum(evens))
 
-#ch2(4000000)
+ch2(4000000)
 
 
 # Challenge number 3.
@@ -54,7 +54,7 @@ def ch4():
 
 
 
-ch4()
+#ch4()
 """digits = [int(a) for a in str(x)]
                 if digits == digits.reverse():
                 palindromes.append("".join(digits))"""
