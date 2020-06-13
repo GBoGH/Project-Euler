@@ -43,6 +43,7 @@ def ch2(x):
 ch2(4000000)
 ```
 
-There are more ways to solve fibonacci number in python, I chose probably the slower one but it is usable in this case as it is not dealing with large numbers. Otherwise regression would be better approach. The principle used is that this function adds numbers to list and than adds the last two values: ```numbers[-1] + numbers[-2]```. Than it selects the even numbers from complete list: ```if (numbers[-1] + numbers[-2]) % 2 == 0:``` and adds them to list of even fibonacci numbers: ```evens.append((numbers[-1] + numbers[-2]))```. Than the function returns sum of values present in the evens list.
+There are more ways to solve fibonacci number in python, I chose probably the slower one but it is usable in this case as it is not dealing with large numbers. Otherwise regression would be better approach.  
+The principle used is that this function adds numbers to list and than adds the last two values: ```numbers[-1] + numbers[-2]```. Than it selects the even numbers from complete list: ```if (numbers[-1] + numbers[-2]) % 2 == 0:``` and adds them to list of even fibonacci numbers: ```evens.append((numbers[-1] + numbers[-2]))```. Than the function returns sum of values present in the evens list.
 
 
