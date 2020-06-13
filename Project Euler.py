@@ -83,3 +83,8 @@ def ch6():
 #ch6()
 
 
+# Challenge number 7.
+primes = []
+def ch7():
+    ""
+ch7()
