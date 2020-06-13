@@ -7,9 +7,9 @@ def ch1(x):
         if i % 5 == 0:
             if i not in multiples:
                 multiples.append(i)
-
     print(sum(multiples))
 
+# Answer is: 233168.
 ch1(1000)
 
 
@@ -23,6 +23,7 @@ def ch2(x):
             evens.append((numbers[-1] + numbers[-2]))
     print(sum(evens))
 
+# Answer is: 4613732
 ch2(4000000)
 
 
@@ -35,18 +36,21 @@ def ch3(x):
         i += 1
     print(int(x))
 
+# Answer is: 6857.
 ch3(600851475143)
 
-#Challenge number 4.
+# Challenge number 4.
 palindromes = []
 def ch4():
-    for j in range(100,1000):
-        x = str(i * j)
-        if len(x) == 6 and x == x[::-1]:
-            palindromes.append(x)
+    for i in range(100,1000):
+        for j in range(100,1000):
+            x = str(i * j)
+            if len(x) == 6 and x == x[::-1]:
+                palindromes.append(x)
 
     print(max(palindromes))
 
+# Answer is: 906609.
 ch4()
 
 # Challenge number 5.
@@ -61,6 +65,7 @@ def ch5():
             i = 2
     print(num)
 
+# Answer is: 232792560.
 ch5()
 
 
@@ -74,6 +79,7 @@ def ch6():
     result = sum(numbers)**2 - sum(squares)
     print(result)
 
+#Answer is 25164150.
 ch6()
 
 
