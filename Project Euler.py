@@ -53,15 +53,29 @@ def ch4():
 
 
 # Challenge number 5.
-#UNFINISHED
+#NOT COMPLETE
 def ch5():
-    for i in range(1, 1000000):
-        j = 1
-        while j <= 20:
-            if i % j == 0:
-                j += 1
-            else:
-                continue
-            print(i)
+    num = 20
+    i = 2
+    while i <= 20:
+        while num % i == 0:
+            i += 1
+        num += 1
+    print(num)
 
 ch5()
+
+"""def ifDividesAll(num):
+  for i in range(2,21):
+    if num % i != 0:
+      return False
+  return True
+
+num = 20
+while True:
+  if ifDividesAll(num):
+    break
+  else:
+    num = num + 1
+print num
+"""
