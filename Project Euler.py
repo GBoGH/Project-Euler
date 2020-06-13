@@ -24,8 +24,7 @@ def ch2(x):
         numbers.append((numbers[-1] + numbers[-2]))
         if (numbers[-1] + numbers[-2]) % 2 == 0:
             evens.append((numbers[-1] + numbers[-2]))
-    print(numbers)
-    print(evens)
+    print(sum(evens))
 
 #ch2(4000000)
 
@@ -43,6 +42,7 @@ def ch3(x):
 
 
 # Challenge number 4.
+# UNFINISHED
 palindromes = []
 def ch4():
     for i in range(100,1000):
