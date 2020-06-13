@@ -9,7 +9,6 @@ def ch1(x):
             if i not in multiples:
                 multiples.append(i)
 
-    print(multiples)
     print(sum(multiples))
 
 #ch1(1000)
@@ -24,6 +23,7 @@ def ch2(x):
         numbers.append((numbers[-1] + numbers[-2]))
         if (numbers[-1] + numbers[-2]) % 2 == 0:
             evens.append((numbers[-1] + numbers[-2]))
+    
     print(sum(evens))
 
 #ch2(4000000)
@@ -36,25 +36,22 @@ def ch3(x):
         while x % i == 0:
             x /= i
         i += 1
+    
     print(int(x))
         
 #ch3(600851475143)
 
 
 # Challenge number 4.
-# UNFINISHED
+
 palindromes = []
 def ch4():
     for i in range(100,1000):
-        for j in reversed(range(100,1000)):
-            while i != j:
-                x = i * j
-                print(x)
-                
+        for j in range(100,1000):
+            x = str(i * j)
+            if len(x) == 6 and x == x[::-1]:
+                palindromes.append(x)
 
+    print("\n" + max(palindromes))
 
-
-ch4()
-"""digits = [int(a) for a in str(x)]
-                if digits == digits.reverse():
-                palindromes.append("".join(digits))"""
+#ch4()
