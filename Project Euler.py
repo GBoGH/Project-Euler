@@ -63,4 +63,17 @@ def ch5():
             i = 2
     print(num)
 
-ch5()
+#ch5()
+
+
+# Challenge number 6.
+numbers = []
+squares = []
+def ch6():
+    for i in range(1,101):
+        squares.append(i**2)
+        numbers.append(i)
+    result = sum(numbers)**2 - sum(squares)
+    print(result)
+
+ch6()
