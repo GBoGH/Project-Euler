@@ -86,5 +86,12 @@ def ch6():
 # Challenge number 7.
 primes = []
 def ch7():
-    ""
+    while len(str(primes) != 10001):
+        x = 2
+        for i in range(2, x):
+            if x % i == 0:
+                print("Not prime")
+            else:
+                print("Prime")
+        x += 1
 ch7()
