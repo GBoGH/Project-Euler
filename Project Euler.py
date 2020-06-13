@@ -52,6 +52,21 @@ def ch4():
             if len(x) == 6 and x == x[::-1]:
                 palindromes.append(x)
 
-    print("\n" + max(palindromes))
+    print(max(palindromes))
 
 #ch4()
+
+
+# Challenge number 5.
+#UNFINISHED
+def ch5():
+    for i in range(1, 1000000):
+        j = 1
+        while j <= 20:
+            if i % j == 0:
+                j += 1
+        print(i)
+
+
+ch5()
+
