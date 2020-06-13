@@ -9,7 +9,6 @@ def ch1(x):
             if i not in multiples:
                 multiples.append(i)
 
-    print(multiples)
     print(sum(multiples))
 
 #ch1(1000)
@@ -53,9 +52,3 @@ def ch4():
 
                 
 
-
-
-ch4()
-"""digits = [int(a) for a in str(x)]
-                if digits == digits.reverse():
-                palindromes.append("".join(digits))"""
