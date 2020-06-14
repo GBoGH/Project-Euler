@@ -79,19 +79,22 @@ def ch6():
     result = sum(numbers)**2 - sum(squares)
     print(result)
 
-#Answer is 25164150.
+# Answer is 25164150.
 #ch6()
 
 
 # Challenge number 7.
 primes = []
 def ch7():
-    while len(str(primes) != 10001):
-        x = 2
+    x = 2
+    while len(primes) != 10001:
         for i in range(2, x):
             if x % i == 0:
-                print("Not prime")
-            else:
-                print("Prime")
+                 break
+        else:
+            primes.append(x)
         x += 1
-ch7()
+    print(primes[-1])
+
+# Answer is: 104743. 
+#ch7()
