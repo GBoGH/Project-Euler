@@ -16,13 +16,13 @@ def ch1(x):
                 multiples.append(i)
     print(sum(multiples))
 
-# Answer is: 233168.
 ch1(1000)
+# Output is: 233168.
 ```
 
-Function checks whether number in given range is divisble by three: ``` if i % 3 == 0: ```, than it chceck whether the same number is divisible by five: ```if i % 5 == 0```. As a last step, it chcecks if the number is not already in list multiples: ```if i not in multiples```. If all three conditions are fulfilled, the number is added to list which is than added together.
+Function checks whether number in given range is divisble by three: ` if i % 3 == 0: `, then it chceck whether the same number is divisible by five: `if i % 5 == 0`. As a last step, it chcecks if the number is not already in list multiples: `if i not in multiples`. If all three conditions are fulfilled, the number is added to list which is than added together.
   
-  
+<br />  
   
 ### Problem number 2.
 
@@ -42,14 +42,14 @@ def ch2(x):
             evens.append((numbers[-1] + numbers[-2]))
     print(sum(evens))
 
-# Answer is: 4613732
 ch2(4000000)
+# Output is: 4613732
 ```
 
 There are more ways to solve fibonacci number in python, I chose probably the slower one but it is usable in this case as it is not dealing with large numbers. Otherwise regression would be better approach.  
-The principle used is that this function adds the last two values in the list numbers: ```numbers[-1] + numbers[-2]``` and adds the sum to the said list as its last value: ```numbers.append((numbers[-1] + numbers[-2]))```. Than it selects the even numbers from complete list: ```if (numbers[-1] + numbers[-2]) % 2 == 0:``` and adds them to list of even fibonacci numbers: ```evens.append((numbers[-1] + numbers[-2]))```. Than the function returns sum of values present in the evens list.
+The principle used is that this function adds the last two values in the list numbers: `numbers[-1] + numbers[-2]` and adds the sum to the said list as its last value: `numbers.append((numbers[-1] + numbers[-2]))`. Then it selects the even numbers from complete list: `if (numbers[-1] + numbers[-2]) % 2 == 0:` and adds them to list of even fibonacci numbers: `evens.append((numbers[-1] + numbers[-2]))`. Than the function returns sum of values present in the evens list.
   
-  
+<br />   
   
 ### Problem number 3.
 > The prime factors of 13195 are 5, 7, 13 and 29.
@@ -66,8 +66,58 @@ def ch3(x):
         i += 1
     print(int(x))
 
-# Answer is: 6857.
 ch3(600851475143)
+# Output is: 6857.
 ```
 
 Every number can have only prime factor which is larger than its square root. Thats why we know it is the largest prime factor. The function is given starting argument i which is 2. 1 would not work because than the inner loop would never break. First while loop is checking wether the square of found number is smaller than x. If it is not we have our largest prime. Inner loop divides x until it gets to prime number. If the inner loop breaks the x in entered in the outer loop which determines if it is the largest prime or not. If the square is larger than the input it is the largest prime factor. If it is not than 1 is added to i and loop continues.
+ 
+ <br />
+ 
+  ### Problem number 4.
+> A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+> Find the largest palindrome made from the product of two 3-digit numbers.
+##### The answer is: 906609.
+
+```python
+# Challenge number 4.
+palindromes = []
+def ch4():
+    for i in range(100,1000):
+        for j in range(100,1000):
+            x = str(i * j)
+            if len(x) == 6 and x == x[::-1]:
+                palindromes.append(x)
+
+    print(max(palindromes))
+
+ch4()
+# Output is: 906609.
+```
+
+Fisrt of all we need to multiply every three digit number `x = str(i * j)`.   
+Then this condition: `if len(x) == 6 and x == x[::-1]:` only selects numbers that have 6 digits as the largest will be one of them and checks wether the number is a palindrome by reversing the string: `x[::-1]`.If both conditions are fulfilled, number is added to palindromes lis. Then function prints the largest one from the palindromes.
+
+<br />
+
+### Problem number 5.
+> 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+> What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+##### The answer is: 232792560.
+
+```python
+# Challenge number 5.
+def ch5():
+    num = 2520
+    i = 2
+    while i <= 20:
+        if num % i == 0:
+            i += 1
+        else:
+            num += 2520
+            i = 2
+    print(num)
+
+ch5()
+# Output is: 232792560.
+```
