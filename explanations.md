@@ -123,3 +123,31 @@ ch5()
 ```
 
 First we have to determine the starting point. In this case it is 2520 as it is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. Then fucntion loops until i is equal to 20. It divides starting number by current i and determines if modulus is 0 `if num % i == 0`. If it is, one is added to i `i += 1` and loop starts again. If num is not divisible by i with remainder of zero, 2520 is added to num `num += 2520` and i is set to its starting value `i = 2` . We add 2520 to num because any mulitple of 2520 will automatically be a multiple of numbers 1 - 10.
+
+<br />
+
+### Problem number 6.
+> The sum of the squares of the first ten natural numbers is,  
+> 1<sup>2</sup>+2<sup>2</sup>+...+10<sup>2</sup>=385  
+> The square of the sum of the first ten natural numbers is,  
+> (1+2+...+10)<sup>2</sup>=55<sup>2</sup>=3025  
+> Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025−385=2640.  
+> Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+##### The answer is: 25164150.
+
+```python
+# Challenge number 6.
+numbers = []
+squares = []
+def ch6():
+    for i in range(1, 101):
+        squares.append(i**2)
+        numbers.append(i)
+    result = sum(numbers)**2 - sum(squares)
+    print(result)
+
+ch6()
+# Output is 25164150.
+```
+
+This function is fairly simple. For first one hundred natural numbers `for i in range(1, 101):`, it first squares the number and adds it to squares list `squares.append(i**2)` and then it simply adds the number to numbers list `numbers.append(i)`. As the output, function returns difference between the sums of lists, one of which is squared `result = sum(numbers)**2 - sum(squares)`.
