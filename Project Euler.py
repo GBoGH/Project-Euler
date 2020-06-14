@@ -85,7 +85,9 @@ def ch6():
 
 # Challenge number 7.
 primes = []
-def ch7():
+from datetime import datetime
+def ch10():
+    startime = datetime.now()
     x = 2
     while len(primes) != 10001:
         for i in range(2, x):
@@ -95,6 +97,7 @@ def ch7():
             primes.append(x)
         x += 1
     print(primes[-1])
+    print(datetime.now()-startime)
 
  # Answer is: 104743. 
-#ch7()
+ch10()
