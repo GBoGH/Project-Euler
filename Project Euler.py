@@ -124,9 +124,9 @@ def ch7_2():
 #ch7_2()
 
 # Challenge number 7, approach number 3.
-import math
-primes = []
-from datetime import datetime
+#import math
+#primes = []
+#from datetime import datetime
 def ch7_3():
     startime = datetime.now()
     x = 2
