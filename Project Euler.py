@@ -67,7 +67,7 @@ def ch5():
             i = 2
     print(num)
 
-ch5()
+#ch5()
 # Output is: 232792560.
 
 
