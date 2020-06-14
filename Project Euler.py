@@ -59,7 +59,7 @@ def ch4():
 def ch5():
     num = 2520
     i = 2
-    while i <= 20:
+    while i != 20:
         if num % i == 0:
             i += 1
         else:
@@ -67,7 +67,7 @@ def ch5():
             i = 2
     print(num)
 
-#ch5()
+ch5()
 # Output is: 232792560.
 
 
