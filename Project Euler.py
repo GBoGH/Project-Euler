@@ -87,20 +87,20 @@ def ch6():
 import math
 from datetime import datetime
 
-primes = []
 
 def ch7():
-    startime = datetime.now()
+    primes = []
     x = 2
-    while len(primes) != 10001:
-        for i in range(2, int(math.ceil(math.sqrt(x)))):
+    while len(primes) != 10067:
+        for i in range(2, math.ceil(math.sqrt(x))):
             if x % i == 0:
-                break
-            else:
-                primes.append(x)
+                 break
+        else:
+            primes.append(str(x))
         x += 1
-    print(primes[-1])
 
+    print(primes[-1])
+    print("".join(primes))
  # Answer is: 104743. 
 ch7()
 
