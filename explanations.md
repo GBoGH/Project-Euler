@@ -16,8 +16,8 @@ def ch1(x):
                 multiples.append(i)
     print(sum(multiples))
 
-# Output is: 233168.
 ch1(1000)
+# Output is: 233168.
 ```
 
 Function checks whether number in given range is divisble by three: ``` if i % 3 == 0: ```, than it chceck whether the same number is divisible by five: ```if i % 5 == 0```. As a last step, it chcecks if the number is not already in list multiples: ```if i not in multiples```. If all three conditions are fulfilled, the number is added to list which is than added together.
@@ -42,8 +42,8 @@ def ch2(x):
             evens.append((numbers[-1] + numbers[-2]))
     print(sum(evens))
 
-# Output is: 4613732
 ch2(4000000)
+# Output is: 4613732
 ```
 
 There are more ways to solve fibonacci number in python, I chose probably the slower one but it is usable in this case as it is not dealing with large numbers. Otherwise regression would be better approach.  
@@ -66,8 +66,8 @@ def ch3(x):
         i += 1
     print(int(x))
 
-# Output is: 6857.
 ch3(600851475143)
+# Output is: 6857.
 ```
 
 Every number can have only prime factor which is larger than its square root. Thats why we know it is the largest prime factor. The function is given starting argument i which is 2. 1 would not work because than the inner loop would never break. First while loop is checking wether the square of found number is smaller than x. If it is not we have our largest prime. Inner loop divides x until it gets to prime number. If the inner loop breaks the x in entered in the outer loop which determines if it is the largest prime or not. If the square is larger than the input it is the largest prime factor. If it is not than 1 is added to i and loop continues.
