@@ -178,4 +178,4 @@ ch7()
 ```
 
 **This is a _horribly_ slow solution. I am working on another one**  
-As I had already mentioned, this is a really slow and ineffective solution. It takes around 90 seconds on my fairly powerful computer. I have seen solutions under a second. Thats why I am working on improving it. Despite being slow as hell, it works so I will explain it anyways.  
+As I had already mentioned, this is a really slow and ineffective solution. It takes around 80 seconds on my computer. I have seen solutions under a second. Thats why I am working on improving it. Despite being slow as hell, it works so I will explain it anyways.  
