@@ -100,3 +100,10 @@ def ch7():
 
 #ch7()
 # Output is: 104743.
+
+# Challenge number 8.
+
+def ch8():
+    ""
+
+ch8()
