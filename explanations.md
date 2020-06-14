@@ -151,3 +151,31 @@ ch6()
 ```
 
 This function is fairly simple. For first one hundred natural numbers `for i in range(1, 101):`, it first squares the number and adds it to squares list `squares.append(i**2)` and then it simply adds the number to numbers list `numbers.append(i)`. As the output, function returns difference between the sums of lists, one of which is squared `result = sum(numbers)**2 - sum(squares)`.
+
+<br />
+
+### Problem number 7.
+> By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.  
+> What is the 10 001st prime number?
+##### The answer is 104743.
+
+```python
+# Challenge number 7.
+primes = []
+def ch7():
+    x = 2
+    while len(primes) != 10001:
+        for i in range(2, x):
+            if x % i == 0:
+                 break
+        else:
+            primes.append(x)
+        x += 1
+    print(primes[-1])
+
+ch7()
+# Output is: 104743.
+```
+
+**This is a _horribly_ slow solution. I am working on another one**  
+As I had already mentioned, this is a really slow and ineffective solution. It takes around 90 seconds on my fairly powerful computer. I have seen solutions under a second. Thats why I am working on improving it. Despite being slow as hell, it works so I will explain it anyways.  
