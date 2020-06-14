@@ -20,7 +20,7 @@ ch1(1000)
 # Output is: 233168.
 ```
 
-Function checks whether number in given range is divisble by three: ` if i % 3 == 0: `, then it chceck whether the same number is divisible by five: `if i % 5 == 0`. As a last step, it chcecks if the number is not already in list multiples: `if i not in multiples`. If all three conditions are fulfilled, the number is added to list which is than added together.
+Function checks whether number in given range is divisble by three ` if i % 3 == 0: `, then it chceck whether the same number is divisible by five `if i % 5 == 0`. As a last step, it chcecks if the number is not already in list multiples `if i not in multiples`. If all three conditions are fulfilled, the number is added to list which is than added together.
   
 <br />  
   
@@ -47,7 +47,7 @@ ch2(4000000)
 ```
 
 There are more ways to solve fibonacci number in python, I chose probably the slower one but it is usable in this case as it is not dealing with large numbers. Otherwise regression would be better approach.  
-The principle used is that this function adds the last two values in the list numbers: `numbers[-1] + numbers[-2]` and adds the sum to the said list as its last value: `numbers.append((numbers[-1] + numbers[-2]))`. Then it selects the even numbers from complete list: `if (numbers[-1] + numbers[-2]) % 2 == 0:` and adds them to list of even fibonacci numbers: `evens.append((numbers[-1] + numbers[-2]))`. Than the function returns sum of values present in the evens list.
+The principle used is that this function adds the last two values in the list numbers `numbers[-1] + numbers[-2]` and adds the sum to the said list as its last value `numbers.append((numbers[-1] + numbers[-2]))`. Then it selects the even numbers from complete list `if (numbers[-1] + numbers[-2]) % 2 == 0:` and adds them to list of even fibonacci numbers `evens.append((numbers[-1] + numbers[-2]))`. Than the function returns sum of values present in the evens list.
   
 <br />   
   
@@ -96,7 +96,7 @@ ch4()
 ```
 
 Fisrt of all we need to multiply every three digit number `x = str(i * j)`.   
-Then this condition: `if len(x) == 6 and x == x[::-1]:` only selects numbers that have 6 digits as the largest will be one of them and checks wether the number is a palindrome by reversing the string: `x[::-1]`.If both conditions are fulfilled, number is added to palindromes lis. Then function prints the largest one from the palindromes.
+Then this condition `if len(x) == 6 and x == x[::-1]:` only selects numbers that have 6 digits as the largest will be one of them and checks wether the number is a palindrome by reversing the string  `x[::-1]`.If both conditions are fulfilled, number is added to palindromes list. Then function prints the largest one from the palindromes.
 
 <br />
 
@@ -110,7 +110,7 @@ Then this condition: `if len(x) == 6 and x == x[::-1]:` only selects numbers tha
 def ch5():
     num = 2520
     i = 2
-    while i <= 20:
+    while i != 20:
         if num % i == 0:
             i += 1
         else:
@@ -121,3 +121,5 @@ def ch5():
 ch5()
 # Output is: 232792560.
 ```
+
+First we have to determine the starting point. In this case it is 2520 as it is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. Then fucntion loops until i is equal to 20. It divides starting number by current i and determines if modulus is 0 `if num % i == 0`. If it is, one is added to i `i += 1` and loop starts again. If num is not divisible by i with remainder of zero, 2520 is added to num `num += 2520` and i is set to its starting value `i = 2` . We add 2520 to num because any mulitple of 2520 will automatically be a multiple of numbers 1 - 10.
