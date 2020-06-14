@@ -9,8 +9,8 @@ def ch1(x):
                 multiples.append(i)
     print(sum(multiples))
 
-# Answer is: 233168.
 #ch1(1000)
+# Output is: 233168.
 
 
 # Challenge number 2.
@@ -23,8 +23,8 @@ def ch2(x):
             evens.append((numbers[-1] + numbers[-2]))
     print(sum(evens))
 
-# Answer is: 4613732
 #ch2(4000000)
+# Output is: 4613732
 
 
 # Challenge number 3.
@@ -36,8 +36,9 @@ def ch3(x):
         i += 1
     print(int(x))
 
-# Answer is: 6857.
 #ch3(600851475143)
+# Output is: 6857.
+
 
 # Challenge number 4.
 palindromes = []
@@ -50,8 +51,9 @@ def ch4():
 
     print(max(palindromes))
 
-# Answer is: 906609.
 #ch4()
+# Output is: 906609.
+
 
 # Challenge number 5.
 def ch5():
@@ -65,8 +67,8 @@ def ch5():
             i = 2
     print(num)
 
-# Answer is: 232792560.
 #ch5()
+# Output is: 232792560.
 
 
 # Challenge number 6.
@@ -79,8 +81,8 @@ def ch6():
     result = sum(numbers)**2 - sum(squares)
     print(result)
 
-# Answer is 25164150.
 #ch6()
+# Output is 25164150.
 
 
 # Challenge number 7.
@@ -96,5 +98,5 @@ def ch7():
         x += 1
     print(primes[-1])
 
-# Answer is: 104743. 
 #ch7()
+# Output is: 104743.
