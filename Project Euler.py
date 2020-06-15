@@ -83,31 +83,45 @@ def ch6():
 #ch6()
 
 
-# Challenge number 7.
+# Challenge number 7, approach number 1.
 import math
 from datetime import datetime
-
+primes = []
 
 def ch7():
+    """starttime = datetime.now()
     primes = []
     x = 2
     while len(primes) != 10067:
-        for i in range(2, math.ceil(math.sqrt(x))):
+        for i in range(2, int(math.ceil(math.sqrt(x)))):
             if x % i == 0:
                  break
         else:
             primes.append(str(x))
         x += 1
+    
+    for i in primes:
+        for j in range(2, i):
+            if i % j == 0:
+                primes.remove(i)
+            else:
+                continue
 
+    print("\n".join(primes))
     print(primes[-1])
-    print("".join(primes))
+    print(datetime.now() - starttime)"""
+    for i in range(1000000):
+        primes.append(str(i))
+    print(primes)
+    print(len(primes))
+    print(primes[-1])
  # Answer is: 104743. 
 ch7()
 
-# Challenge number 7, approach 2.
+# Challenge number 7, approach number 2.
 primes = [2, 3, 5 ,7]
 def ch7_2():
-    for i in range(2,100):
+    for i in range(2,1000):
         if i % 2 == 0:
             continue
         if i % 3 == 0:
@@ -124,9 +138,9 @@ def ch7_2():
 #ch7_2()
 
 # Challenge number 7, approach number 3.
-#import math
-#primes = []
-#from datetime import datetime
+import math
+primes = []
+from datetime import datetime
 def ch7_3():
     startime = datetime.now()
     x = 2
@@ -143,3 +157,104 @@ def ch7_3():
 
  # Answer is: 104743. 
 #ch7_3()
+
+
+# Challenge number 7, approach number 4.
+import math
+from datetime import datetime
+
+primes = []
+def ch7_4(x):
+    line = [1]
+
+    for i in range(max(x ,0)):
+        line.append(int(line[i]*(x-i)//(i+1)))
+
+   
+    line.remove(1)
+    line.remove(x)
+
+    print(line)
+
+    
+    half = math.ceil(len(line)/2)
+
+    for i in range(half):
+        if line[i] % x != 0:
+            break
+           
+            
+    else:
+        primes.append(x)
+    print(primes)
+       
+#ch7_4(83)
+
+
+# Challenge number 7, approach number 5.
+import math
+from datetime import datetime
+
+primes = []
+
+
+def ch7_5():
+    """line = [1]
+
+    for i in range(max(x ,0)):
+        line.append(int(line[i]*(x-i)//(i+1)))
+
+   
+    line.remove(1)
+    line.remove(x)
+
+    print(line)
+
+    
+    half = math.ceil(len(line)/2)
+
+    for i in range(half):
+        if line[i] % x != 0:
+            break
+           
+            
+    else:
+        primes.append(x)
+    print(primes)"""
+       
+
+
+
+
+    starttime = datetime.now()
+
+    x = 2
+    line = [1]
+    while len(primes) != 10067:
+        
+        
+        for i in range(max(x ,0)):
+            line.append(int(line[i]*(x-i)//(i+1)))
+
+        """
+        line.remove(1)
+        line.remove(x)"""
+
+
+    
+        half = math.ceil(len(line)/2)
+
+        for i in range(line[2], half):
+            if line[i] % x != 0:
+                break
+           
+            
+        else:
+            primes.append(x)
+
+
+        x+= 1
+
+    print(primes[-1])
+    print(datetime.now() - starttime)
+#ch7_5()
