@@ -149,7 +149,7 @@ def ch7_3():
     startime = datetime.now()
     x = 2
     for i in range(100002):
-        for i in range(2, int(math.ceil(math.sqrt(x)))):
+        for i in range(2, int(math.ceil(math.sqrt(x)))+1):
             if x % i == 0:
                  break
         else:
@@ -268,12 +268,12 @@ def ch7_5():
 from datetime import datetime
 import math
 
-primes = []
+primes = [2]
 def ch7_6():
     starttime = datetime.now()
     x = 2
     while len(primes) != 10001:
-        for i in range(2, math.ceil(math.sqrt(x))):
+        for i in range(2, math.ceil(math.sqrt(x)+1)):
             if x % i == 0:
                 break
         else:
@@ -281,7 +281,8 @@ def ch7_6():
         x += 1
     
     print(primes[-1])
+    print(primes)
     print(datetime.now()-starttime)
 
-#ch7_6()
+ch7_6()
 
