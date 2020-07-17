@@ -86,37 +86,41 @@ def ch6():
 # Challenge number 7, approach number 1.
 import math
 from datetime import datetime
-primes = []
 
 def ch7():
-    """starttime = datetime.now()
+    starttime = datetime.now()
     primes = []
     x = 2
-    while len(primes) != 10067:
-        for i in range(2, int(math.ceil(math.sqrt(x)))):
+    while len(primes) != 10001:
+        for i in range(2, x):
             if x % i == 0:
                  break
         else:
-            primes.append(str(x))
+            primes.append(x)
         x += 1
-    
-    for i in primes:
+        
+    """for i in primes:
         for j in range(2, i):
             if i % j == 0:
                 primes.remove(i)
             else:
                 continue
+    """
 
-    print("\n".join(primes))
+    
     print(primes[-1])
-    print(datetime.now() - starttime)"""
-    for i in range(1000000):
-        primes.append(str(i))
-    print(primes)
-    print(len(primes))
-    print(primes[-1])
+    print(datetime.now() - starttime)
  # Answer is: 104743. 
-ch7()
+#ch7()
+
+"""for i in primes:
+        for j in range(2, i):
+            if i % j == 0:
+                primes.remove(i)
+            else:
+                continue
+    """
+
 
 # Challenge number 7, approach number 2.
 primes = [2, 3, 5 ,7]
@@ -258,3 +262,5 @@ def ch7_5():
     print(primes[-1])
     print(datetime.now() - starttime)
 #ch7_5()
+
+
