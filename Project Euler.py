@@ -264,3 +264,24 @@ def ch7_5():
 #ch7_5()
 
 
+# Challenge number 7, approach number 6.
+from datetime import datetime
+import math
+
+primes = []
+def ch7_6():
+    starttime = datetime.now()
+    x = 2
+    while len(primes) != 10001:
+        for i in range(2, math.ceil(math.sqrt(x))):
+            if x % i == 0:
+                break
+        else:
+            primes.append(x)
+        x += 1
+    
+    print(primes[-1])
+    print(datetime.now()-starttime)
+
+#ch7_6()
+
